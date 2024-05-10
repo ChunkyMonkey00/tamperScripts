@@ -16,3 +16,7 @@ function setCookie(c_name, value, exdays) {
     var c_value = escape(value) + ((exdays == null)? "" : "; expires=" + exdate.toUTCString());
     document.cookie = c_name + "=" + c_value;
 }
+
+function cookieExists(cookie) {
+    return !(cookie == null || cookie == undefined);
+}
